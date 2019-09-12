@@ -59,7 +59,7 @@ function imageUpload() {
                 .then(response => {
                     _this3.quill.enable(true);
                     _this3.quill.insertEmbed(range.index, 'image', `http://fruitslive-staging.s3-ap-northeast-1.amazonaws.com/${response[0].objectName}`);
-                    // this.quill.setSelection(range.index + 1, Quill.sources.SILENT);
+                    _this3.quill.setSelection(range.index + 1, Quill.sources.SILENT);
                     fileInput.value = '';
                 })
         });
@@ -106,15 +106,15 @@ export class RichTextInput extends Component {
         } = this.props;
 
         this.quill = new Quill(this.divRef, {
-            modules: { 
-				toolbar: {
-					container: toolbar,
+            modules: {
+                toolbar: {
+                    container: toolbar,
                     handlers: {
-                        image: imageHandler
+                        image: imageUpload
                     }
-				}, 
-				clipboard: { matchVisual: false } 
-			},
+                },
+                clipboard: { matchVisual: false }
+            },
             theme: 'snow',
             ...options,
         });
