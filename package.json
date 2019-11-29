@@ -1,5 +1,5 @@
 {
-    "name": "ra-input-rich-text",
+    "name": "ra-input-rich-text-khiem",
     "version": "2.9.3",
     "description": "<RichTextInput> component for react-admin, useful for editing HTML code in admin GUIs.",
     "main": "lib/index.js",
