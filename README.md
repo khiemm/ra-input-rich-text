@@ -47,3 +47,8 @@ You can customize the rich text editor toolbar using the `toolbar` attribute, as
 ## License
 
 This library is licensed under the MIT License, and sponsored by [marmelab](http://marmelab.com).
+
+
+## STEP TO PUBLISH
+1. npm install rimraf -g
+2. npm run build

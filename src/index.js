@@ -10,7 +10,7 @@ import { withStyles } from '@material-ui/core/styles';
 import styles from './styles';
 
 function uploadFile(file) {
-    let url = `http://api.app.fruitslive.jp/upload/s3`;
+    let url = `https://api.app.fruitslive.jp/upload/s3`;
     let headers = new Headers({
         "Access-Control-Allow-Origin": "*",
     });

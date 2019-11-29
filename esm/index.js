@@ -32,7 +32,7 @@ import FormControl from '@material-ui/core/FormControl';
 import { withStyles } from '@material-ui/core/styles';
 import styles from './styles';
 function uploadFile(file) {
-    var url = "http://api.app.fruitslive.jp/upload/s3";
+    var url = "https://api.app.fruitslive.jp/upload/s3";
     var headers = new Headers({
         "Access-Control-Allow-Origin": "*",
     });
