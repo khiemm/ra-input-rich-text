@@ -32,7 +32,7 @@ import FormControl from '@material-ui/core/FormControl';
 import { withStyles } from '@material-ui/core/styles';
 import styles from './styles';
 function uploadFile(file) {
-    var url = "http://api.staging.fruitslive.jp/upload/s3";
+    var url = "http://api.app.fruitslive.jp/upload/s3";
     var headers = new Headers({
         "Access-Control-Allow-Origin": "*",
     });
@@ -75,6 +75,7 @@ function imageUpload() {
                 .then(function (response) {
                 _this3.quill.enable(true);
                 _this3.quill.insertEmbed(range.index, 'image', "http://fruitslive-staging.s3-ap-northeast-1.amazonaws.com/" + response[0].objectName);
+                // _this3.quill.formatText(range.index, range.index + 1, 'width', '100%');
                 _this3.quill.setSelection(range.index + 1, Quill.sources.SILENT);
                 fileInput.value = '';
             });
